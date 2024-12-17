@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="Folders.View.DirectoryElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:Folders.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:DirectoryElementVM}"
+             mc:Ignorable="d"
+             Name="this">
+
+    <UserControl.Resources>
+        <Style TargetType="UserControl">
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="LightGray"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                Background="White">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Border BorderThickness="0"
+            CornerRadius="10"
+            Background="{Binding Background}"
+            Margin="0,0,8,10">
+        <StackPanel Name ="MainStack">
+            <StackPanel MaxWidth="{Binding MaxWidth}">
+                <Grid Margin="10,10,10,5"
+                      Width="{Binding ImageSize}"
+                      Height="{Binding ImageSize}"
+                      MinWidth="80"
+                      IsEnabled="False" ClipToBounds="True"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center">
+                    
+                    <Image Name="Back"
+                           Source="/Icons/backFolder.png"/>
+                    <Grid x:Name="ContentContainer">
+                        <Border BorderBrush="Black"
+                                CornerRadius="3"
+                                BorderThickness="{Binding ImageBorserThickness}"
+                                ClipToBounds="True"
+                                Name ="ContentBorder">
+                            <Image Name="Content"
+                                   Margin="{Binding ContentImageMargin}"
+                                   Source="{Binding ImageSourse}"
+                                   DockPanel.Dock="Bottom">
+                            </Image>
+                        </Border>
+                    </Grid>
+                    <Image Name="Front"
+                           Source="/Icons/frontFolder.png"/>
+                    <StackPanel DockPanel.Dock="Right"
+                                VerticalAlignment="Bottom"
+                                HorizontalAlignment="Right">
+                        <Image Name ="urlIcon"
+                               Source="/Icons/urlIcon2.png"
+                               Width="16"
+                               Height="16"
+                               Visibility="Collapsed"/>
+                        <Image Name="lnkIcon"
+                               Visibility="Collapsed"
+                               Source="/Icons/lnkIcon.png"
+                               Width="16"
+                               Height="16"/>
+                    </StackPanel>
+                </Grid>
+                <TextBlock Name="block"
+                           Text="{Binding ElementName}"
+                           TextAlignment="Center"
+                           Margin="6,1,6,6"
+                           FontSize="12"
+                           TextWrapping="Wrap"
+                           Visibility="Visible"
+                           LineStackingStrategy="BlockLineHeight"
+                           LineHeight="16"
+                           MaxHeight="64">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseLeftButtonDown"> <i:InvokeCommandAction Command="{Binding StartEditName}" PassEventArgsToCommand="True"/> </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBlock>
+                <TextBox Name="box"
+                         Text="{Binding ElementName}"
+                         TextAlignment="Center"
+                         Margin="4,0,4,4"
+                         FontSize="12"
+                         TextWrapping="Wrap"
+                         Visibility="Collapsed"
+                         MaxHeight="65">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="KeyDown"> <i:InvokeCommandAction Command="{Binding CheckEnterPressed}"/> </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+            </StackPanel>
+        </StackPanel>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="MouseLeftButtonDown"> <i:InvokeCommandAction Command="{Binding StartProcess}"/> </i:EventTrigger>
+            <i:EventTrigger EventName="MouseRightButtonDown"> <i:InvokeCommandAction Command="{Binding RightClick}"/> </i:EventTrigger>
+            <i:EventTrigger EventName="MouseEnter"> <i:InvokeCommandAction Command="{Binding MouseEnter}"/> </i:EventTrigger>
+            <i:EventTrigger EventName="MouseLeave"> <i:InvokeCommandAction Command="{Binding MouseLeave}"/> </i:EventTrigger>
+        </i:Interaction.Triggers>
+    </Border>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="MouseLeftButtonDown"> <i:InvokeCommandAction Command="{Binding GetFocus}"/> </i:EventTrigger>
+    </i:Interaction.Triggers>
+</UserControl>

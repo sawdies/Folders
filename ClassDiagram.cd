@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Folders.Data.DataContainer" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAACIAAAAAAAAQAAAAAQAADBAAAAAAACAAAIAA=</HashCode>
+      <FileName>Data\DataContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Folders.Data.FileFormats" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEEBgAIAECAEAIICAAAAAAAiJiEIAAAAUAAAEAAgI=</HashCode>
+      <FileName>Data\FileFormats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Folders.Data.IconExtractor" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Folders.Data.IconExtractor.SHFILEINFO" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Data\IconExtractor.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAABAgBAAAAAAEAABAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\IconExtractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Folders.Model.DirectoryItemModel" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Model\DirectoryItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Folders.Model.NotifyPropertyChangedRealization" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\NotifyPropertyChangedRealization.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Folders.Model.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Folders.View.DirectoryElement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\DirectoryElement.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Folders.View.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iIAADIkEAAKAQACAUgAAJBEhIgIAAABEoAABgACCAE4=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Folders.View.NavigationBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAACEAAAAAQAAAAACAAAAAoAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\NavigationBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Folders.View.TreeElement" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\TreeElement.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Folders.Model.DeType" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAQEAAAAA=</HashCode>
+      <FileName>Model\DeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Folders.Model.NavigationBarKit" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAgCAEAAAQ=</HashCode>
+      <FileName>Model\NavigationBarKit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

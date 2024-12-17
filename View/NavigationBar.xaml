@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Folders.View.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:Folders.ViewModel"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=viewmodel:NavigationBarVM}">
+    <ScrollViewer HorizontalAlignment="Stretch"
+                  VerticalScrollBarVisibility="Hidden"
+                  HorizontalScrollBarVisibility="Hidden"
+                  Background="White"
+                  MouseDown="ScrollViewer_MouseDown"
+                  MouseUp="ScrollViewer_MouseUp"
+                  PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                  Name="Scroller">
+        <UserControl Name="StackContainer"
+                     HorizontalAlignment="Stretch"
+                     Background="Transparent"/>
+    </ScrollViewer>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="MouseEnter">
+            <i:InvokeCommandAction Command="{Binding MouseEnter}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="MouseLeave">
+            <i:InvokeCommandAction Command="{Binding MouseLeave}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</UserControl>

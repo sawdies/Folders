@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Folders.View.TreeElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:Folders.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:TreeElementVM}"
+             mc:Ignorable="d">
+    <Border Background="{Binding Background}"
+            Margin="{Binding GlobalMargin}"
+            CornerRadius="0">
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="MouseLeftButtonDown"> <i:InvokeCommandAction Command="{Binding OpenDirectory}"/> </i:EventTrigger>
+            <i:EventTrigger EventName="MouseEnter"> <i:InvokeCommandAction Command="{Binding MouseEnter}"/> </i:EventTrigger>
+            <i:EventTrigger EventName="MouseLeave"> <i:InvokeCommandAction Command="{Binding MouseLeave}"/> </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid>
+            <StackPanel Orientation="Horizontal">
+                <Grid Opacity="{Binding ArrowContainerOpacity}">
+                    <Image Source="{Binding ArrowImagesourse}"
+                           Opacity="{Binding ArrowOpacity}"
+                           Visibility="{Binding ArrowVisibility}"
+                           Margin="{Binding ArrowMargin}"
+                           Cursor="Hand"
+                           Width="10" 
+                           Height="10">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseEnter">
+                                <i:InvokeCommandAction Command="{Binding ArrowMouseEnter}"/>
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="MouseLeave">
+                                <i:InvokeCommandAction Command="{Binding ArrowMouseLeave}"/>
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="MouseLeftButtonUp">
+                                <i:InvokeCommandAction Command="{Binding СontrolChildrenElements}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Image>
+                </Grid>
+                <Image Source="{Binding IconImagesourse}" Width="16" Height="16" Margin="5,0,0,0"/>
+                <TextBlock Text="{Binding ElementName}" FontSize="12" Margin="7,3,5,3"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Margin="0,0,3,0"
+                        Visibility="Collapsed">
+                <Image Source="/Icons/pinIcon.png"
+                       Width="16"
+                       Height="16"
+                       Opacity="0.5"
+                       />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
+ 

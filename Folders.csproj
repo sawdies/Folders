@@ -1,0 +1,248 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>mainIcon.ico</ApplicationIcon>
+    <NuGetAudit>True</NuGetAudit>
+    <PackageLicenseFile>cert.pfx</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageIcon>mainIcon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dorectoryOpened.mp3" />
+    <None Remove="Icons\accdbFile.png" />
+    <None Remove="Icons\aepFile.png" />
+    <None Remove="Icons\aiFile.png" />
+    <None Remove="Icons\backArrowIcon.png" />
+    <None Remove="Icons\backFolder.png" />
+    <None Remove="Icons\cancelBackArrowIcon.png" />
+    <None Remove="Icons\cFile.png" />
+    <None Remove="Icons\computerIcon.png" />
+    <None Remove="Icons\cppFile.png" />
+    <None Remove="Icons\csFile.png" />
+    <None Remove="Icons\desktopFolder.png" />
+    <None Remove="Icons\desktopIcon.png" />
+    <None Remove="Icons\dllFile.png" />
+    <None Remove="Icons\documentsIcon.png" />
+    <None Remove="Icons\docxFile.png" />
+    <None Remove="Icons\downArrowIcon.png" />
+    <None Remove="Icons\downloadsFolder.png" />
+    <None Remove="Icons\driverIcon.png" />
+    <None Remove="Icons\exeFile.png" />
+    <None Remove="Icons\folderIcon.png" />
+    <None Remove="Icons\frontFolder.png" />
+    <None Remove="Icons\inddFile.png" />
+    <None Remove="Icons\iniFile.png" />
+    <None Remove="Icons\isoFile.png" />
+    <None Remove="Icons\javaFile.png" />
+    <None Remove="Icons\jpegFile.png" />
+    <None Remove="Icons\jpgFile.png" />
+    <None Remove="Icons\jsonFile.png" />
+    <None Remove="Icons\libraryIcon.png" />
+    <None Remove="Icons\lnkIcon.png" />
+    <None Remove="Icons\localDriverFolder.png" />
+    <None Remove="Icons\mdFile.png" />
+    <None Remove="Icons\mp3File.png" />
+    <None Remove="Icons\msiFile.png" />
+    <None Remove="Icons\nullFile.png" />
+    <None Remove="Icons\pdfFile.png" />
+    <None Remove="Icons\picturesFolder.png" />
+    <None Remove="Icons\picturesIcon.png" />
+    <None Remove="Icons\pinIcon.png" />
+    <None Remove="Icons\pngFile.png" />
+    <None Remove="Icons\pptFile.PNG" />
+    <None Remove="Icons\pptmFile.PNG" />
+    <None Remove="Icons\pptxFile.png" />
+    <None Remove="Icons\prprojFile.png" />
+    <None Remove="Icons\psdFile.png" />
+    <None Remove="Icons\pyFile.png" />
+    <None Remove="Icons\pywFile.png" />
+    <None Remove="Icons\removableDriverFolder.png" />
+    <None Remove="Icons\removableDriverIcon.png" />
+    <None Remove="Icons\rightArrowIcon.png" />
+    <None Remove="Icons\rtfFile.png" />
+    <None Remove="Icons\slnFile.png" />
+    <None Remove="Icons\sqlFile.png" />
+    <None Remove="Icons\systemDriverFolder.png" />
+    <None Remove="Icons\systemDriverIcon.png" />
+    <None Remove="Icons\txtFile.png" />
+    <None Remove="Icons\unknownDriverIcon.png" />
+    <None Remove="Icons\upArrowIcon.png" />
+    <None Remove="Icons\updateArrowIcon.png" />
+    <None Remove="Icons\urlFile.png" />
+    <None Remove="Icons\urlIcon.png" />
+    <None Remove="Icons\urlIcon2.png" />
+    <None Remove="Icons\userFolderIcon.png" />
+    <None Remove="Icons\voidFile.png" />
+    <None Remove="Icons\voidFolder.png" />
+    <None Remove="Icons\vsdxFile.png" />
+    <None Remove="Icons\windowsFolderIcon.png" />
+    <None Remove="Icons\xamlFile.png" />
+    <None Remove="Icons\xlsFile.png" />
+    <None Remove="Icons\xlsxFile.png" />
+    <None Remove="Icons\xmlFile.png" />
+    <None Remove="Icons\zipFolder.png" />
+    <None Remove="View\simpleFile.png" />
+    <None Remove="View\simpleFolder.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\mainIcon.ico" />
+    <Content Include="mainIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\accdbFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\aepFile.png" />
+    <Resource Include="Icons\aiFile.png" />
+    <Resource Include="Icons\backArrowIcon.png" />
+    <Resource Include="Icons\backFolder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\cancelBackArrowIcon.png" />
+    <Resource Include="Icons\cFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\computerIcon.png" />
+    <Resource Include="Icons\cppFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\csFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\desktopFolder.png" />
+    <Resource Include="Icons\desktopIcon.png" />
+    <Resource Include="Icons\dllFile.png" />
+    <Resource Include="Icons\documentsIcon.png" />
+    <Resource Include="Icons\docxFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\downArrowIcon.png" />
+    <Resource Include="Icons\downloadsFolder.png" />
+    <Resource Include="Icons\downloadsIcon.png" />
+    <Resource Include="Icons\driverIcon.png" />
+    <Resource Include="Icons\exeFile.png" />
+    <Resource Include="Icons\folderIcon.png" />
+    <Resource Include="Icons\frontFolder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\inddFile.png" />
+    <Resource Include="Icons\iniFile.png" />
+    <Resource Include="Icons\isoFile.png" />
+    <Resource Include="Icons\javaFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\jpegFile.png" />
+    <Resource Include="Icons\jpgFile.png" />
+    <Resource Include="Icons\jsonFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\libraryIcon.png" />
+    <Resource Include="Icons\lnkIcon.png" />
+    <Resource Include="Icons\localDriverFolder.png" />
+    <Resource Include="Icons\mainIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\mdFile.png" />
+    <Resource Include="Icons\mp3File.png" />
+    <Resource Include="Icons\msiFile.png" />
+    <Resource Include="Icons\nullFile.png" />
+    <Resource Include="Icons\pdfFile.png" />
+    <Resource Include="Icons\picturesFolder.png" />
+    <Resource Include="Icons\picturesIcon.png" />
+    <Resource Include="Icons\pinIcon.png" />
+    <Resource Include="Icons\pngFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\pptFile.png" />
+    <Resource Include="Icons\pptmFile.png" />
+    <Resource Include="Icons\pptxFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\prprojFile.png" />
+    <Resource Include="Icons\psdFile.png" />
+    <Resource Include="Icons\pyFile.png" />
+    <Resource Include="Icons\pywFile.png" />
+    <Resource Include="Icons\removableDriverFolder.png" />
+    <Resource Include="Icons\removableDriverIcon.png" />
+    <Resource Include="Icons\rightArrowIcon.png" />
+    <Resource Include="Icons\rtfFile.png" />
+    <Resource Include="Icons\simpleFolder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\slnFile.png" />
+    <Resource Include="Icons\sqlFile.png" />
+    <Resource Include="Icons\systemDriverFolder.png" />
+    <Resource Include="Icons\systemDriverIcon.png" />
+    <Resource Include="Icons\desktopFolderIcon.png" />
+    <Resource Include="Icons\documentsFolderIcon.png" />
+    <Resource Include="Icons\downloadsFolderIcon.png" />
+    <Resource Include="Icons\imagesFolderIcon.png" />
+    <Resource Include="Icons\musicFolderIcon.png" />
+    <Resource Include="Icons\unknownDriverIcon.png" />
+    <Resource Include="Icons\upArrowIcon.png" />
+    <Resource Include="Icons\updateArrowIcon.png" />
+    <Resource Include="Icons\userFolderIcon.png" />
+    <Resource Include="Icons\videosFolderIcon.png" />
+    <Resource Include="Icons\txtFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\urlFile.png" />
+    <Resource Include="Icons\urlIcon.png" />
+    <Resource Include="Icons\urlIcon2.png" />
+    <Resource Include="Icons\voidFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\voidFolder.png" />
+    <Resource Include="Icons\vsdxFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\windowsFolderIcon.png" />
+    <Resource Include="Icons\xamlFile.png" />
+    <Resource Include="Icons\xlsFile.png" />
+    <Resource Include="Icons\xlsxFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\xmlFile.png" />
+    <Resource Include="Icons\zipFolder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Icons\mainIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
